@@ -16,7 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
           const nameButton = document.createElement('button');
           nameButton.textContent = player["Participant Name"];
           nameButton.classList.add('btn', 'btn-link', 'p-0', 'name-btn');
-          nameButton.addEventListener('click', () => showPlayerModal(player));
+          nameButton.addEventListener('click', () => {
+            showPlayerModal(player);
+            nameButton.classList.add('name-clicked');
+            setTimeout(() => {
+            nameButton.classList.remove('name-clicked');
+            }, 300);
+        });
           nameCell.appendChild(nameButton);
           row.appendChild(nameCell);
 
