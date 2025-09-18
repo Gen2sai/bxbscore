@@ -7,17 +7,33 @@
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #DCCCBD;
 }
 
 /* Header container */
 header {
   position: relative;
   width: 100%;
-  height: 80px; /* adjust height of banner */
+  height: 120px; /* adjust height of banner */
   /* background: url("../images/banner.jpg") no-repeat center center/cover; */
   display: flex;
   align-items: left;
   justify-content: center;
+}
+
+.custom-header {
+  background-color: #002A1D;
+  padding: 10;
+}
+
+.custom-header img {
+  height: 100%;
+  max-height: 100px; /* keeps it under control */
+}
+
+.custom-header .container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Logo styling */
@@ -33,6 +49,10 @@ header {
 .logo img {
   height: 40px; /* adjust logo size */
   width: auto;
+}
+
+.custom-body {
+  background-color: #DCCCBD
 }
 
 /* Optional overlay effect */
