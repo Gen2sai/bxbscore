@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const nameCell = document.createElement('td');
           const nameButton = document.createElement('button');
           nameButton.textContent = player["Participant Name"];
-          nameButton.classList.add('btn', 'btn-link', 'p-0');
+          nameButton.classList.add('btn', 'btn-link', 'p-0', 'name-btn');
           nameButton.addEventListener('click', () => showPlayerModal(player));
           nameCell.appendChild(nameButton);
           row.appendChild(nameCell);
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       routeBlock.style.color = 'white';
                       routeBlock.style.fontWeight = 'bold';
                       routeBlock.textContent = `R${r}`;
-                      routeBlock.style.backgroundColor = player[key] === "1" ? 'green' : 'pink';
+                      routeBlock.style.backgroundColor = player[key] === "1" ? 'green' : '#F5146E';
 
                       routesContainer.appendChild(routeBlock);
                   }

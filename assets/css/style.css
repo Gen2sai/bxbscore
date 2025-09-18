@@ -1,4 +1,10 @@
-/* Reset basic spacing */
+@font-face {
+  font-family: 'NewEdge666';
+  src: url('../../assets/font/NewEdge666-RegularRounded.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,8 +28,9 @@ header {
 }
 
 .custom-header {
-  background-color: #002A1D;
+  background-color: #002a1d;
   padding: 10;
+  z-index: 1;
 }
 
 .custom-header img {
@@ -39,7 +46,8 @@ header {
 /* Logo styling */
 .logo {
   position: relative;
-  z-index: 2; /* keep above banner */
+  z-index: 3; /* keep above banner */
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.8); /* subtle background behind logo */
   padding: 2px 4px;
   border-radius: 4px;
@@ -49,23 +57,33 @@ header {
 .logo img {
   height: 40px; /* adjust logo size */
   width: auto;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .custom-body {
   background-color: #DCCCBD
 }
 
-/* Optional overlay effect */
-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.3); /* dark overlay on banner */
-  z-index: 1;
-}
-
 .footer-icon {
   max-height: 80px;   /* keeps images from being too tall */
   width: auto;        /* keeps aspect ratio */
   object-fit: contain; /* makes sure logos fit nicely */
+}
+
+.name-btn {
+  color: black;
+  text-decoration: underline;
+}
+
+.name-btn:hover {
+  color: gray;
+  text-decoration: underline;
+}
+
+.title-header {
+  font-family: 'NewEdge666', sans-serif;
+  font-size: 60px;
+  padding-top: 8px;
+  font-weight: 600;
 }
