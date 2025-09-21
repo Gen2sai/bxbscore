@@ -29,7 +29,7 @@ header {
 
 .custom-header {
   background-color: #002a1d;
-  padding: 15px 10px; /* default for desktop */
+  padding: 20px 10px; /* default for desktop */
   height: auto; 
   display: flex;
   align-items: center;
@@ -75,10 +75,22 @@ header span {
   background-color: #DCCCBD
 }
 
+footer {
+  background-color: #002a1d; /* match your header */
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap; 
+}
+
 .footer-icon {
-  max-height: 80px;   /* keeps images from being too tall */
-  width: auto;        /* keeps aspect ratio */
-  object-fit: contain; /* makes sure logos fit nicely */
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
 .name-btn {
@@ -113,4 +125,58 @@ header span {
   0%   { transform: scale(1); background-color: #ffff99; } /* light yellow */
   50%  { transform: scale(1.2); background-color: #ffcc33; } /* orange */
   100% { transform: scale(1); background-color: transparent; }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: auto;   /* let content size naturally */
+    padding: 1px;  /* reduce padding */
+    text-align: center;
+  }
+
+  .custom-header img.logo-img {
+    max-height: 60px;         /* shrink logo */
+    margin-bottom: 1px;
+  }
+
+  .title-header {
+    font-size: 1.4rem;        /* smaller font for title */
+    margin: 2px 0;
+  }
+
+  .last-updated {
+    font-size: 0.6rem;        /* shrink "Last updated" text */
+    margin-top: 2px;
+  }
+
+  .custom-header .d-flex {
+    flex-direction: column;   /* stack logo, title, updated text vertically */
+    align-items: center;      /* center everything */
+    text-align: center;
+  }
+
+  footer {
+    padding: 12px 0;   /* top/bottom space */
+  }
+
+  footer .container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    flex-wrap: nowrap !important;   /* no wrapping */
+    overflow-x: auto !important;    /* allow scroll instead of wrap */
+  }
+
+  .footer-icon {
+    max-height: 60px;
+    width: auto;
+    flex: 0 0 auto;  /* don’t wrap */
+  }
+  
+  footer .container img.footer-icon {
+    max-height: 60px !important;
+    width: auto !important;
+    flex: 0 0 auto !important; /* each logo stays side by side */
+  }
 }
