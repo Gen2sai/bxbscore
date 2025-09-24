@@ -195,3 +195,9 @@ footer .container {
     flex: 0 0 auto !important; /* each logo stays side by side */
   }
 }
+
+#scoreTable td:first-child,
+#scoreTable th:first-child {
+  text-align: left;
+  white-space: nowrap;
+}
