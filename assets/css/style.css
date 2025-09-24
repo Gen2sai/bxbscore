@@ -138,7 +138,7 @@ footer .container {
 
 @keyframes clickPop {
   0%   { transform: scale(1); background-color: #ffff99; } /* light yellow */
-  50%  { transform: scale(1.2); background-color: #ffcc33; } /* orange */
+  50%  { transform: scale(1.2); background-color: #EAB666; } /* orange */
   100% { transform: scale(1); background-color: transparent; }
 }
 
